@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="Lokaluthyrning.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <div class="logo-container">
+                <a href="#"><img src="https://usercontent.one/wp/rosengardsfolketshus.se/wp-content/uploads/2021/01/loggo_text-symbol_50pxh.png" alt="Rosengårds Folkets Hus Logo"></a>
+            </div>
+            <div class="nav-links-container">
+                <a href="/index.html">Välkommen</a>
+                <a href="/Verksamheter/Verksamheter.html">Verksamheter</a>
+                <a href="/Bli medlem/bli-medlem.html">Bli medlem</a>
+                <a href="/Om-oss/om-oss.html">Om oss</a>
+                <a href="/Navigering/Lokaluthyrning.html" class="active">Tjänster</a>
+                <a href="/Kontakta/kontakt.html">Kontakt</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="hero-text">
+                <h2>Letar ni lokal för föreningsarrangemang eller privat fest?</h2>
+                <p>Rosengårds Folkets Hus erbjuder samlingslokaler i hjärtat av Rosengård. Vi finns på Wachtmeistersväg 1, andra våningen. Här arrangeras allt ifrån årsmöten till bröllop. Kanske vill du ha en vernissage?</p>
+                <p>När du bokar lokal hos oss ingår alltid bord, stolar, projektor och projektorduk i priset. Om du önskar boka ljudteknik eller tjänst utöver lokalen, tillkommer en förmånlig kostnad beroende på vad ni önskar boka.</p>
+            </div>
+            <div class="hero-image"></div>
+        </section>
+
+        <section class="venue-container">
+          <div class="venue">
+              <img src="stor-sal.jpg" alt="Stor sal">
+              <h3>Stora salen för föreningar</h3>
+              <p>1 200 SEK/4h (medlemsföreningar)<br>
+              1 400 SEK/4h (ickemedlemmar)</p>
+              <button class="book-btn" data-venue="Stora salen för föreningar" name="venue" required  >Boka nu</button>
+          </div>
+          <div class="venue">
+              <img src="stor-sal-fest.jpg" alt="Stor sal fest">
+              <h3>Festpris för Stora salen föreningar</h3>
+              <p>3 000 SEK/6h (medlemsföreningar)<br>
+              3 500 SEK/6h (ickemedlemmar)</p>
+              <button class="book-btn" data-venue="Festpris för Stora salen föreningar" name="venue" required >Boka nu</button>
+          </div>
+          <div class="venue">
+              <img src="stor-sal-privat.jpg" alt="Stor sal privat">
+              <h3>Festpris för Stora salen för privatpersoner</h3>
+              <p>3 500 SEK/6h, deposition 2000 kr</p>
+              <button class="book-btn" data-venue="Festpris för Stora salen för privatpersoner" name="venue" required >Boka nu</button>
+          </div>
+          <div class="venue">
+              <img src="konferensrum.jpg" alt="Konferensrum">
+              <h3>Konferensrummet (20 pers)</h3>
+              <p>800 SEK/4h (medlemsföreningar)<br>
+              1 000 SEK/4h (ickemedlemmar & privatpersoner)</p>
+              <button class="book-btn" data-venue="Konferensrummet (20 pers)" name="venue" required >Boka nu</button>
+          </div>
+          <div class="venue">
+              <img src="musikrum.jpg" alt="Musikrum">
+              <h3>Musikrummet (8 pers)</h3>
+              <p>400 SEK/4h (medlemsföreningar)<br>
+              600 SEK/4h (icke medlemmar & privatpersoner)</p>
+              <button class="book-btn" data-venue="Musikrummet (8 pers)" name="venue" required >Boka nu</button>
+          </div>
+      </section>
+      
+      <div class="addon-modal hidden">
+          <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <h2>Välj tillägg</h2>
+              <form id="addon-form">
+                  <div class="addon-cards">
+                      <div class="addon-card">
+                          <img src="stora-ljudanlaggning.jpg" alt="Stora ljudanläggningen">
+                          <div class="addon-details">
+                              <input type="checkbox" id="stora-ljudanlaggningen" name="addons[]" value="Stora ljudanläggningen med mixerbord & 1 mikrofon">
+                              <label for="stora-ljudanlaggningen">Stora ljudanläggningen med mixerbord & 1 mikrofon: 500 SEK</label>
+                          </div>
+                      </div>
+                      <div class="addon-card">
+                          <img src="lilla-ljudanlaggning.jpg" alt="Lilla ljudanläggningen">
+                          <div class="addon-details">
+                              <input type="checkbox" id="lilla-ljudanlaggningen" name="addons[]" value="Lilla ljudanläggningen & 1 mikrofon">
+                              <label for="lilla-ljudanlaggningen">Lilla ljudanläggningen & 1 mikrofon: 200 SEK</label>
+                          </div>
+                      </div>
+                      <div class="addon-card">
+                          <img src="extra-mikrofoner.jpg" alt="Extra mikrofoner">
+                          <div class="addon-details">
+                              <input type="checkbox" id="extra-mikrofoner" name="addons[]" value="Extra mikrofoner">
+                              <label for="extra-mikrofoner">Extra mikrofoner: 50 SEK/mikrofon</label>
+                          </div>
+                      </div>
+                      <div class="addon-card">
+                          <div class="addon-details">
+                              <input type="checkbox" id="stadning" name="addons[]" value="Städning">
+                              <label for="stadning">Städning: 1 500 SEK</label>
+                          </div>
+                      </div>
+                      <div class="addon-card">
+                          <div class="addon-details">
+                              <input type="checkbox" id="moblering" name="addons[]" value="Möblering">
+                              <label for="moblering">Möblering: 1 000 SEK</label>
+                          </div>
+                      </div>
+                  </div>
+                  <button type="button" class="confirm-btn">Fortsätt</button>
+              </form>
+          </div>
+      </div>
+      
+      <div class="booking-modal hidden">
+        <div class="modal-content" method="post" action="">
+              <span class="close-btn">&times;</span>
+              <h2>Boka lokal</h2>
+              <form id="booking-form" action="" method="post">
+                  <label for="name">Namn:</label>
+                  <input type="text" id="name" name="name" required>
+                  <label for="email">E-post:</label>
+                  <input type="email" id="email" name="email" required>
+                  <label for="phone">Telefonnummer:</label>
+                  <input type="tel" id="phone" name="phone" required>
+                  <label for="date">Datum:</label>
+                  <input type="date" id="date" name="date" required>
+                  <label for="time">Tid:</label>
+                  <input type="time" id="time" name="time" required>
+                  <button type="submit">Boka</button>
+              </form>
+          </div>
+      </div>
+      </main>
+    
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Kontakta oss</h4>
+            <p><i class="fas fa-map-marker-alt"></i>12345678</p>
+            <p><i class="fas fa-envelope"></i>12345678</p>
+            <p><i class="fas fa-phone"></i>12345678</p>
+          </div>
+          <div class="footer-section">
+            <h4>Följ oss</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">&copy; 2024 Folkets Hus Rosengård</p>
+      </footer>
+
+
+    <script src="Lokaluthyrning.js"></script>
+    </body>
+    </html>
